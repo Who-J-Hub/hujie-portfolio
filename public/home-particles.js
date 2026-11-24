@@ -2,6 +2,7 @@
   'use strict';
   const art = document.querySelector('.home-code-art');
   const canvas = art.querySelector('canvas');
+  const label = art.querySelector('.home-particle').textContent.trim();
   const ctx = canvas.getContext('2d');
   const stencil = document.createElement('canvas');
   const mask = stencil.getContext('2d', { willReadFrequently: true });
@@ -27,8 +28,7 @@
     mask.font = `800 ${size}px "Microsoft YaHei", "PingFang SC", sans-serif`;
     mask.textAlign = 'center';
     mask.textBaseline = 'middle';
-    mask.fillText('胡', width / 2 - size * .53, height * .53);
-    mask.fillText('杰', width / 2 + size * .53, height * .53);
+    mask.fillText(label, width / 2, height * .53, width * .74);
 
     const pixels = mask.getImageData(0, 0, width, height).data;
     points = [];

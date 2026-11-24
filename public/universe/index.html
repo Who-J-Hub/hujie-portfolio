@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com https://persistent.oaistatic.com/plugins/visualize/; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src 'self' blob:; connect-src 'self' blob: data:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>胡杰 · 粒子宇宙</title>
+<title>H-Jie · 粒子宇宙</title>
 <style>:root {
   color-scheme: light dark;
   background-color: var(
@@ -1537,7 +1537,7 @@ html,body{background:#05070e!important}
     <span class="text-small text-muted tabular-nums" id="pa-count">64,000 颗粒子</span>
   </div>
   <div class="viz-row pa-presets" role="group" aria-label="粒子形态">
-    <button class="btn" type="button" data-shape="hujie" aria-pressed="true">胡杰</button>
+    <button class="btn" type="button" data-shape="hujie" aria-pressed="true">H-Jie</button>
     <button class="btn" type="button" data-shape="galaxy" aria-pressed="false">旋涡星系</button>
     <button class="btn" type="button" data-shape="saturn" aria-pressed="false">土星光环</button>
     <button class="btn" type="button" data-shape="flower" aria-pressed="false">星云之花</button>
@@ -1642,7 +1642,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   const root = document.getElementById('particle-atlas');
   const $ = selector => root.querySelector(selector);
   const canvas = $('#pa-canvas');
-  const names = {hujie:'胡杰',custom:'自定义文字',portrait:'粒子人像',galaxy:'旋涡星系',saturn:'土星光环',flower:'星云之花',helix:'生命螺旋',vortex:'时空涡流'};
+  const names = {hujie:'H-Jie',custom:'自定义文字',portrait:'粒子人像',galaxy:'旋涡星系',saturn:'土星光环',flower:'星云之花',helix:'生命螺旋',vortex:'时空涡流'};
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   let motionReduced=reduced.matches;
   const embedded = new URLSearchParams(location.search).has('embed');
@@ -1802,7 +1802,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     const mask=document.createElement('canvas'); mask.width=512; mask.height=256;
     const ctx=mask.getContext('2d',{willReadFrequently:true});
     ctx.fillStyle='#fff';ctx.textAlign='center';ctx.textBaseline='middle';
-    const chars=Array.from(text), twoLines=chars.length>4;
+    const chars=Array.from(text), twoLines=text!==names.hujie&&chars.length>4;
     ctx.font=(twoLines?'bold 103px ':'bold 190px ')+'"Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif';
     if(twoLines){const split=Math.ceil(chars.length/2);ctx.fillText(chars.slice(0,split).join(''),256,75,460);ctx.fillText(chars.slice(split).join(''),256,180,460);}
     else ctx.fillText(text,256,132,460);
@@ -1817,7 +1817,7 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
     return namePoints;
   }
   function form(kind,out) {
-    const textPoints=(kind==='hujie'||kind==='custom')?getNamePoints(kind==='custom'?state.customText:'胡杰'):null;
+    const textPoints=(kind==='hujie'||kind==='custom')?getNamePoints(kind==='custom'?state.customText:names.hujie):null;
     for(let i=0;i<MAX;i++) {
       const a=seeds[i*4],b=seeds[i*4+1],c=seeds[i*4+2],d=seeds[i*4+3];
       let x,y,z;
@@ -2719,7 +2719,7 @@ html,body{width:100%;height:100%;margin:0!important;padding:0!important;overflow
 
 </script>
 
-<a class="portfolio-back" href="/">← 返回胡杰的主页</a>
+<a class="portfolio-back" href="/">← 返回H-Jie的主页</a>
 <script>
 (() => {
   const root=document.getElementById('particle-atlas');
