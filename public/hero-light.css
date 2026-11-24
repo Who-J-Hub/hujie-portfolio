@@ -1,0 +1,276 @@
+:root.home-page {
+  --paper: #101c30;
+  --ink: #fcfaf4;
+  --muted: #c4d0da;
+  --subtle: #afc1d0;
+  --line: #3b4d63;
+  --line-strong: #7c91a4;
+  --panel: #192a40;
+  --accent: #a8f5d8;
+  --accent-hover: #d4ffec;
+  --on-accent: #102b25;
+  --accent-halo: #67dcb248;
+  --control-paper: #162438f2;
+  --ticker-stroke: #8b9eae;
+  --light-edge: #fffef5;
+  --light-flare: #91d7c5;
+  --light-bloom: #a4d6cd39;
+  --lens-glint: #fffef4ba;
+  --reflected-bloom: #284e7370;
+  --hero-shadow: #0d182adb;
+}
+
+:root.home-page[data-theme="day"] {
+  --paper: #e9f1f9;
+  --ink: #162238;
+  --muted: #42556a;
+  --subtle: #4f6178;
+  --line: #c4d1e0;
+  --line-strong: #71859b;
+  --panel: #f7fbff;
+  --accent: #086555;
+  --accent-hover: #064c41;
+  --on-accent: #f8fffb;
+  --accent-halo: #187d6433;
+  --control-paper: #f7fbfff2;
+  --ticker-stroke: #62778b;
+  --light-edge: #fffdf5;
+  --light-flare: #3c9885;
+  --light-bloom: #8ccfbb80;
+  --lens-glint: #fffdf8eb;
+  --reflected-bloom: #87a6cf83;
+  --hero-shadow: #e9f1f9e6;
+}
+
+.home-page main { overflow-x: clip; }
+
+.home-page .hero::before {
+  inset: 0 -6vw;
+  background:
+    radial-gradient(ellipse 28% 45% at 84% 35%, var(--light-bloom), transparent 100%),
+    radial-gradient(ellipse 32% 50% at 81% 76%, var(--reflected-bloom), transparent 100%);
+}
+
+.home-page .site-header nav [aria-current="page"],
+.home-page .home-work-heading .section-kicker,
+.home-page .home-card-arrow,
+.home-page .home-tail a { color: var(--accent); }
+
+.home-page .header-contact { border-color: var(--line-strong); }
+.home-page .circle-arrow {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: inset 0 1px #ffffff45, 0 0 24px var(--accent-halo);
+}
+.home-page .explore-link:hover .circle-arrow { background: var(--accent-hover); }
+.home-page .home-card:hover { border-color: var(--accent); }
+
+.hero .hero-orbit {
+  --rim-bright: #fffdf2;
+  --rim-tint: #9edbc5ba;
+  --rim-reflection: #b1c9e8a0;
+  --lens-edge: #b4c6cb72;
+  --lens-mist: #507367;
+  --lens-shade: #182842;
+  --lens-reflection: #cadbdc48;
+  --lens-return: #6492c285;
+  --lens-etch: #c9e1e22a;
+  --mark-face: #e8f1e970;
+  --mark-edge: #e4f0ec91;
+  overflow: visible;
+  opacity: 1;
+}
+
+[data-theme="day"] .hero .hero-orbit {
+  --rim-bright: #447969;
+  --rim-tint: #6b998eb3;
+  --rim-reflection: #5f789ba3;
+  --lens-edge: #6b83897d;
+  --lens-mist: #f7faf3;
+  --lens-shade: #8fa9b9;
+  --lens-reflection: #fffef9d6;
+  --lens-return: #93b1d39e;
+  --lens-etch: #456d782b;
+  --mark-face: #fffdf4eb;
+  --mark-edge: #3f636aa3;
+}
+
+.orbit-lens {
+  position: absolute;
+  z-index: -1;
+  inset: 11%;
+  border: 1px solid var(--lens-edge);
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse 25% 16% at 81% 14%, var(--lens-glint), transparent),
+    radial-gradient(ellipse 43% 24% at 78% 91%, var(--lens-return), transparent),
+    radial-gradient(ellipse at 86% 16%, var(--lens-mist), transparent 69%),
+    linear-gradient(141deg, var(--lens-shade) 29%, transparent 80%);
+  box-shadow: inset -5px -8px 32px var(--lens-reflection);
+}
+
+.orbit-lens::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(from 238deg,
+    transparent 0 102deg, var(--light-flare) 146deg, var(--light-edge) 184deg,
+    var(--light-flare) 212deg, transparent 251deg);
+  mask-image: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 2px), #000 99%, transparent);
+}
+
+.orbit-lens::after {
+  content: "";
+  position: absolute;
+  inset: 3%;
+  border: 1px solid transparent;
+  border-right-color: var(--lens-edge);
+  border-bottom-color: var(--lens-reflection);
+  border-radius: inherit;
+  background: repeating-radial-gradient(circle closest-side, transparent 0 7px, var(--lens-etch) 8px, transparent 9px 12px);
+  mask-image: radial-gradient(circle closest-side, transparent 64%, #000 96%);
+  transform: rotate(-20deg);
+}
+
+.hero .hero-orbit i { border-color: var(--lens-edge); }
+.hero .hero-orbit i:nth-child(2) { border-color: var(--lens-edge); opacity: .58; }
+.hero .hero-orbit i:first-child { --glint-start: 84deg; --glint-period: 17s; }
+.hero .hero-orbit i:nth-child(3) { --glint-start: -75deg; --glint-period: 25s; }
+
+.hero-orbit :is(i:first-child, i:nth-child(3))::before {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border-radius: 50%;
+  background: conic-gradient(
+    transparent 14deg, var(--rim-tint) 46deg, var(--rim-bright) 73deg,
+    var(--rim-tint) 90deg, transparent 124deg 216deg, var(--rim-reflection) 254deg,
+    transparent 300deg
+  );
+  mask-image: radial-gradient(farthest-side, transparent calc(100% - 14px),
+    #0004 calc(100% - 10px), #000 calc(100% - 8px), #0004 calc(100% - 6px),
+    transparent calc(100% - 2px));
+  transform: rotate(var(--glint-start));
+}
+
+.hero .hero-orbit > span {
+  background: linear-gradient(142deg, var(--mark-face), transparent 75%);
+  background-clip: text;
+  -webkit-text-stroke-color: var(--mark-edge);
+}
+
+.hero .hero-orbit::after {
+  width: 5px;
+  height: 5px;
+  left: calc(50% - 2.5px);
+  top: calc(50% - 2.5px);
+  background: var(--light-edge);
+  box-shadow: 0 0 14px 3px var(--light-flare);
+}
+
+:root.home-page[data-theme="night"] .hero-orbit {
+  --rim-bright: #f5faf2;
+  --rim-tint: #a9c9ca93;
+  --rim-reflection: #72d1b69c;
+  --lens-edge: #b9cfdb54;
+  --lens-mist: #7c9aa6;
+  --lens-shade: #1b2a40;
+  --lens-reflection: #c3e4e252;
+  --lens-return: #5dbba360;
+  --lens-etch: #d4e8e626;
+  --mark-face: #f1f7f4a3;
+  --mark-edge: #e0eeeb9e;
+}
+
+:root.home-page[data-theme="night"] .orbit-lens {
+  background:
+    radial-gradient(ellipse 19% 15% at 83% 16%, var(--lens-glint), transparent),
+    radial-gradient(ellipse 27% 23% at 21% 81%, var(--lens-return), transparent),
+    linear-gradient(125deg, transparent 49%, #b8dbdd19 60%, #ebf6f050 64%, #c0d8da18 73%, transparent 81%),
+    radial-gradient(ellipse 82% 69% at 92% 14%, var(--lens-mist), transparent 82%),
+    linear-gradient(150deg, var(--lens-shade), #111e32 78%);
+  box-shadow: inset -3px -5px 20px var(--lens-reflection), 0 0 34px #a5d0cb16;
+}
+
+:root.home-page[data-theme="night"] .orbit-lens::before {
+  background: conic-gradient(
+    #425870 0deg, #92aab4 27deg, #d6edeb 39deg, var(--light-edge) 49deg 54deg,
+    #bce8d9 63deg, #82b8b2 76deg, #36586d 111deg, #263950 150deg,
+    #5b8891 199deg, #9ce2ca 218deg, #416d73 239deg, #273a53 267deg, #425870 360deg
+  );
+  mask-image: radial-gradient(closest-side, transparent calc(100% - 8px),
+    #0005 calc(100% - 7px), #000 calc(100% - 5px) calc(100% - 2px), transparent 100%);
+}
+
+:root.home-page[data-theme="night"] .hero-orbit i { opacity: .58; }
+:root.home-page[data-theme="night"] .hero-orbit i:nth-child(2) { opacity: .38; }
+
+.home-page .hero h1 {
+  letter-spacing: -.045em;
+  text-shadow: 0 2px 22px var(--hero-shadow);
+}
+
+.home-page .accent-word::after {
+  height: 2px;
+  background: linear-gradient(90deg, var(--light-flare), var(--accent) 68%, transparent);
+}
+
+.home-page .hero .hero-intro {
+  color: var(--muted);
+  text-shadow: 0 1px 12px var(--hero-shadow);
+}
+
+.hero-scroll {
+  bottom: 74px;
+}
+
+.motion-on .hero-orbit :is(i:first-child, i:nth-child(3))::before {
+  animation: orbit-glint var(--glint-period) linear infinite;
+}
+
+.motion-on:not(.hero-in-view) .hero-orbit :is(i:first-child, i:nth-child(3))::before,
+.page-hidden .hero-orbit :is(i:first-child, i:nth-child(3))::before {
+  animation-play-state: paused;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .motion-on .hero .hero-orbit {
+    translate: calc((var(--pointer-x, 50%) - 50%) * .032)
+      calc((var(--pointer-y, 50%) - 50%) * .024);
+    transition: translate .7s cubic-bezier(.2,.65,.3,1);
+  }
+}
+
+@media (max-width: 767px) {
+  .home-page .hero { padding-top: clamp(120px, 23svh, 215px); }
+  .home-page .hero h1 { font-size: clamp(26px, 7.55vw, 48px); }
+  .home-page .hero::before {
+    background:
+      radial-gradient(ellipse 51% 34% at 93% 19%, var(--light-bloom), transparent 100%),
+      radial-gradient(ellipse 53% 28% at 91% 44%, var(--reflected-bloom), transparent 100%);
+  }
+  .hero .hero-orbit {
+    width: min(79vw, 390px);
+    height: min(79vw, 390px);
+    right: -12%;
+    top: clamp(42px, 8svh, 76px);
+    opacity: .8;
+  }
+  .hero .hero-orbit > span { font-size: min(48vw, 230px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-on .hero .hero-orbit {
+    translate: none;
+    transition: none;
+  }
+  .motion-on .hero-orbit :is(i:first-child, i:nth-child(3))::before {
+    animation: none;
+  }
+}
+
+@keyframes orbit-glint {
+  to { transform: rotate(calc(var(--glint-start) + 1turn)); }
+}

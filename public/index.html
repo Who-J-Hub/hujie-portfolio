@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN" class="home-page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e9f1f9" data-day="#e9f1f9" data-night="#101c30">
+  <meta name="description" content="胡杰的个人主页。摄影、Vibe Coding 与一片属于自己的粒子宇宙。">
+  <meta property="og:title" content="胡杰 · 在光影与代码之间">
+  <meta property="og:description" content="胡杰的个人主页。摄影、Vibe Coding 与一片属于自己的粒子宇宙。">
+  <title>胡杰 · 在光影与代码之间</title>
+  <script src="/theme.js"></script>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/motion.css">
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/pages.css">
+  <link rel="stylesheet" href="/hero-light.css">
+  <script src="/gallery.js" defer></script>
+  <script src="/site.js" defer></script>
+  <script src="/motion.js" defer></script>
+  <script src="/home-particles.js" defer></script>
+</head>
+<body>
+  <canvas id="ambient-field" aria-hidden="true"></canvas>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="intro-curtain" aria-hidden="true"><span>PHOTOGRAPHY × CREATIVE CODING</span><strong>HU<span>·</span>JIE</strong><small>让灵感发生。</small></div>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="胡杰，返回首页"><span class="monogram">hj<span>●</span></span><span class="brand-name">胡杰<span class="brand-slash"> / </span>个人主页</span></a>
+    <nav aria-label="主要导航">
+      <a href="/" aria-current="page">首页</a>
+      <a href="/photography/">摄影</a>
+      <a href="/code/">代码</a>
+      <a href="/about/">关于</a>
+    </nav>
+    <a class="header-contact" href="/about/#contact">分享主页 <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-orbit" aria-hidden="true">
+        <i></i><i></i><i></i>
+        <div class="orbit-lens"></div>
+        <span>HJ</span>
+      </div>
+      <span class="hero-edition" aria-hidden="true">SELECTED WORK / AN ONGOING EXPLORATION</span>
+      <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> 摄影，代码，还有不设限的好奇心</div>
+      <h1 id="hero-title" aria-label="用镜头收集日常，用代码让灵感发生。"><span class="hero-line" aria-hidden="true">用镜头收集日常，</span><span class="hero-line" aria-hidden="true">用代码让<span class="accent-word">灵感发生<span class="title-period">。</span></span></span></h1>
+      <div class="hero-bottom">
+        <a class="explore-link" href="#selected-work"><span class="circle-arrow" aria-hidden="true">↓</span> 看看我的作品</a>
+        <p class="hero-intro">你好，我是胡杰。<br>在光影与代码之间，探索生活的另一种可能。</p>
+        <span class="hero-index" aria-hidden="true">A PERSONAL<br>SPACE FOR CURIOSITY.</span>
+      </div>
+      <div class="hero-scroll" aria-hidden="true"><span>SCROLL TO EXPLORE</span><i></i><span>光影与代码之间 ↓</span></div>
+    </section>
+
+    <div class="motion-ticker" aria-hidden="true"><div class="ticker-track"><span>PHOTOGRAPHY <b>+</b> VIBE CODING <b>+</b> FROM VISION TO REALITY <b>+</b></span><span>PHOTOGRAPHY <b>+</b> VIBE CODING <b>+</b> FROM VISION TO REALITY <b>+</b></span></div></div>
+
+    <section class="home-work wrap" id="selected-work" aria-labelledby="selected-title">
+      <div class="home-work-heading">
+        <div><span class="section-kicker">SELECTED WORK / 01—03</span><h2 id="selected-title">我的创作与日常</h2></div>
+        <p>用镜头观察世界，用代码试出新的可能。</p>
+      </div>
+      <div class="home-grid">
+        <a class="home-card" href="/photography/" id="photography">
+          <div class="home-card-art home-photography-art" aria-hidden="true">
+            <div class="street-art"><span></span><i></i><b></b></div>
+            <img id="home-photo" alt="" decoding="async" loading="lazy" hidden>
+            <span class="home-art-index">01 / PHOTOGRAPHY</span>
+          </div>
+          <div class="home-card-body">
+            <div><h3>摄影</h3><p id="home-photo-caption">街头、山野，以及路过的人。</p></div>
+            <span class="home-card-arrow" aria-hidden="true">↗</span>
+          </div>
+        </a>
+        <a class="home-card" href="/code/" id="code">
+          <div class="home-card-art home-code-art" aria-hidden="true">
+            <span class="home-particle">胡杰</span>
+            <canvas class="home-particle-field"></canvas>
+            <span class="home-art-index">02 / VIBE CODING</span>
+          </div>
+          <div class="home-card-body">
+            <div><h3>粒子宇宙</h3><p>用拖动和点击，重组一片星云。</p></div>
+            <span class="home-card-arrow" aria-hidden="true">↗</span>
+          </div>
+        </a>
+        <a class="home-card" href="/about/" id="about">
+          <div class="home-card-art home-about-art" aria-hidden="true">
+            <span class="home-about-mark">保持<br>好奇<span>。</span></span>
+            <span class="home-art-index">03 / ABOUT ME</span>
+          </div>
+          <div class="home-card-body">
+            <div><h3>关于我</h3><p>在观察中发现，在创造中表达。</p></div>
+            <span class="home-card-arrow" aria-hidden="true">↗</span>
+          </div>
+        </a>
+      </div>
+      <div class="home-tail" id="contact"><p>把喜欢的作品分享给朋友。</p><a href="/about/#contact">分享主页 <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+  </main>
+
+  <div class="closing-wordmark wrap" aria-hidden="true">HU<span>·</span>JIE</div>
+  <footer class="site-footer wrap"><a class="footer-brand" href="/">胡杰 <span>HU JIE</span></a><span>© <span id="year">2026</span> · 用好奇心，慢慢创造。 <a id="manage-link" href="/manage" hidden>管理照片 ↗</a></span><a href="#" class="back-top">回到顶部 <span aria-hidden="true">↑</span></a></footer>
+  <div class="site-preferences">
+    <label class="theme-picker" hidden>
+      <svg class="theme-icon" viewBox="0 0 20 20" aria-hidden="true">
+        <path class="theme-moon" d="M16.6 12.2A7 7 0 0 1 7.8 3.4a7 7 0 1 0 8.8 8.8Z"/>
+        <path class="theme-sun" d="M10 1.5v2m0 13v2m8.5-8.5h-2m-13 0h-2m14.5-6-1.4 1.4m-9.2 9.2L4 16m12 0-1.4-1.4M5.4 5.4 4 4m10 6a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
+      </svg>
+      <select id="theme-select" aria-label="页面外观">
+        <option value="system">跟随系统</option>
+        <option value="day">白天</option>
+        <option value="night">夜晚</option>
+      </select>
+      <svg class="theme-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg>
+    </label>
+    <button type="button" id="motion-toggle" aria-pressed="true" hidden><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 7v4M7 3v12M11 5v8M15 7v4"/></svg><span>动态：开</span></button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101517">
+  <meta name="description" content="胡杰的 Vibe Coding 作品，体验可以拖动和重组的粒子宇宙。">
+  <meta property="og:title" content="代码实验 · 胡杰">
+  <meta property="og:description" content="胡杰的 Vibe Coding 作品，体验可以拖动和重组的粒子宇宙。">
+  <title>代码实验 · 胡杰</title>
+  <script src="/theme.js"></script>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/motion.css">
+  <link rel="stylesheet" href="/hero-light.css">
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/pages.css">
+  <link rel="stylesheet" href="/code.css">
+  <script src="/main.js" defer></script>
+  <script src="/site.js" defer></script>
+  <script src="/motion.js" defer></script>
+</head>
+<body>
+  <canvas id="ambient-field" aria-hidden="true"></canvas>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="胡杰，返回首页"><span class="monogram">hj<span>●</span></span><span class="brand-name">胡杰<span class="brand-slash"> / </span>个人主页</span></a>
+    <nav aria-label="主要导航">
+      <a href="/">首页</a>
+      <a href="/photography/">摄影</a>
+      <a href="/code/" aria-current="page">代码</a>
+      <a href="/about/">关于</a>
+    </nav>
+    <a class="header-contact" href="/about/#contact">分享主页 <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <header class="page-masthead wrap">
+      <span class="section-kicker">02 / VIBE CODING</span>
+      <h1>代码实验</h1>
+      <p>把名字做成一片可以拖动、重组和引爆的粒子宇宙。</p>
+      <a class="code-launch" href="#code">进入粒子实验 <span aria-hidden="true">↓</span></a>
+    </header>
+
+    <section class="code-section" id="code" aria-labelledby="code-title" tabindex="-1">
+      <div class="stage-sticky">
+      <div class="universe-shell" id="universe-shell">
+        <iframe id="universe" src="/universe/?embed=1" title="胡杰的粒子宇宙，可拖动旋转，点击引爆，并使用下方按钮切换形态" allow="fullscreen" loading="eager"></iframe>
+        <div class="universe-heading"><span class="micro-label">01 / ENTER MY UNIVERSE</span><h2 id="code-title">一个名字，<br>一片宇宙。</h2><p>我的粒子实验，正在这里发生。</p></div>
+        <a class="fullscreen-link" href="/universe/" aria-label="打开完整粒子宇宙体验" title="打开完整体验"><span aria-hidden="true">↗</span></a>
+        <div class="universe-toolbar">
+          <div class="universe-guide"><span class="live-dot" aria-hidden="true"></span><span id="universe-status" role="status">粒子宇宙加载中</span><span class="guide-divider" aria-hidden="true">/</span><span class="pointer-hint">拖动旋转 · 点击引爆</span></div>
+          <div class="particle-controls" role="group" aria-label="粒子宇宙控制">
+            <button type="button" data-shape="hujie" aria-pressed="true">胡杰</button>
+            <button type="button" data-shape="galaxy" aria-pressed="false">星系</button>
+            <button type="button" data-shape="saturn" aria-pressed="false">土星</button>
+            <button type="button" id="burst-button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1 1.8 6.2L18 9l-6.2 1.8L10 17l-1.8-6.2L2 9l6.2-1.8L10 1Z"/></svg> 超新星爆发</button>
+            <button type="button" id="pause-button" aria-pressed="false" aria-label="暂停粒子动画"><svg class="pause-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4v12M13 4v12"/></svg><span>暂停</span></button>
+          </div>
+        </div>
+        <div class="universe-fallback" id="universe-fallback" hidden><p>粒子宇宙暂未成功加载。</p><button type="button" id="retry-universe">重新加载</button></div>
+      </div>
+      </div>
+    </section>
+    <div class="project-caption wrap"><div><span class="project-number">01</span><h3>粒子宇宙 <span>·</span> 超新星</h3><span class="project-category">VIBE CODING / INTERACTIVE ART</span></div><p>让灵感有形，让每一次点击都有回响。</p></div>
+
+  </main>
+
+  <footer class="site-footer wrap"><a class="footer-brand" href="/">胡杰 <span>HU JIE</span></a><span>© <span id="year">2026</span> · 用好奇心，慢慢创造。 <a id="manage-link" href="/manage" hidden>管理照片 ↗</a></span><a href="#" class="back-top">回到顶部 <span aria-hidden="true">↑</span></a></footer>
+  <div class="site-preferences">
+    <label class="theme-picker" hidden>
+      <svg class="theme-icon" viewBox="0 0 20 20" aria-hidden="true">
+        <path class="theme-moon" d="M16.6 12.2A7 7 0 0 1 7.8 3.4a7 7 0 1 0 8.8 8.8Z"/>
+        <path class="theme-sun" d="M10 1.5v2m0 13v2m8.5-8.5h-2m-13 0h-2m14.5-6-1.4 1.4m-9.2 9.2L4 16m12 0-1.4-1.4M5.4 5.4 4 4m10 6a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
+      </svg>
+      <select id="theme-select" aria-label="页面外观">
+        <option value="system">跟随系统</option>
+        <option value="day">白天</option>
+        <option value="night">夜晚</option>
+      </select>
+      <svg class="theme-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg>
+    </label>
+    <button type="button" id="motion-toggle" aria-pressed="true" hidden><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 7v4M7 3v12M11 5v8M15 7v4"/></svg><span>动态：开</span></button>
+  </div>
+</body>
+</html>

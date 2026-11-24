@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101517">
+  <meta name="description" content="胡杰的摄影展厅，收录街头、山野和人物摄影。">
+  <meta property="og:title" content="摄影 · 胡杰">
+  <meta property="og:description" content="胡杰的摄影展厅，收录街头、山野和人物摄影。">
+  <title>摄影 · 胡杰</title>
+  <script src="/theme.js"></script>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/motion.css">
+  <link rel="stylesheet" href="/hero-light.css">
+  <link rel="stylesheet" href="/gallery-light.css">
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/pages.css">
+  <script src="/gallery.js" defer></script>
+  <script src="/site.js" defer></script>
+  <script src="/motion.js" defer></script>
+  <script src="/gallery-light.js" defer></script>
+</head>
+<body>
+  <canvas id="ambient-field" aria-hidden="true"></canvas>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="胡杰，返回首页"><span class="monogram">hj<span>●</span></span><span class="brand-name">胡杰<span class="brand-slash"> / </span>个人主页</span></a>
+    <nav aria-label="主要导航">
+      <a href="/">首页</a>
+      <a href="/photography/" aria-current="page">摄影</a>
+      <a href="/code/">代码</a>
+      <a href="/about/">关于</a>
+    </nav>
+    <a class="header-contact" href="/about/#contact">分享主页 <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <header class="page-masthead wrap">
+      <span class="section-kicker">01 / PHOTOGRAPHY</span>
+      <h1>摄影</h1>
+      <p>街头、山野和路过的人。我用镜头记录那些值得停一下的时刻。</p>
+      <a class="gallery-jump" href="#gallery-works">查看作品 <span aria-hidden="true">↓</span></a>
+    </header>
+
+    <section class="photography-section wrap" id="photography" aria-labelledby="photo-title" data-light="gold">
+      <div class="light-exhibition" id="light-exhibition">
+        <div class="light-scene" aria-hidden="true">
+          <i class="light-fallback"></i>
+          <canvas id="gallery-light-canvas"></canvas>
+        </div>
+        <div class="light-coordinates" aria-hidden="true"><span>LIGHT STUDY / 02</span><i></i><span>EXPOSURE · 01</span></div>
+        <div class="section-heading light-copy">
+          <div><span class="section-kicker">02 / THROUGH MY LENS</span><h2 id="photo-title">把平常，<br>拍得<span>不平常。</span></h2></div>
+          <p>一些路过，也值得被记住。</p>
+        </div>
+        <div class="light-toolbar">
+          <div class="light-modes" id="light-modes" role="group" aria-label="展厅光线" hidden>
+            <button type="button" data-light-mode="gold" aria-pressed="true"><i aria-hidden="true"></i>金色流光</button>
+            <button type="button" data-light-mode="prism" aria-pressed="false"><i aria-hidden="true"></i>棱镜折射</button>
+          </div>
+          <span class="light-hint" aria-hidden="true"><span class="light-hint-pointer">移动指针，引导光束</span><span class="light-hint-touch">触碰画面，移动光束</span></span>
+        </div>
+      </div>
+      <div class="gallery-rail">
+        <h3 id="gallery-works" tabindex="-1">作品展陈</h3><i aria-hidden="true"></i><span aria-hidden="true">SELECTED FRAMES</span>
+      </div>
+      <div class="photo-grid" id="photo-grid">
+        <figure class="photo-slot"><div class="photo-frame street-frame"><span class="frame-top">PHOTOGRAPHY / 001</span><div class="street-art" aria-hidden="true"><span></span><i></i><b></b></div><div class="placeholder-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h4l2-3h4l2 3h4v13H4Z"/><circle cx="12" cy="13" r="4"/></svg><span>等待一张喜欢的照片</span></div><span class="frame-bottom">A MOMENT, WAITING TO BE SEEN.</span></div><figcaption><span>街头与日常</span><span>摄影展位 · 01</span></figcaption></figure>
+        <figure class="photo-slot"><div class="photo-frame nature-frame"><span class="frame-top">PHOTOGRAPHY / 002</span><div class="nature-art" aria-hidden="true"><span></span><i></i><b></b></div><div class="placeholder-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h4l2-3h4l2 3h4v13H4Z"/><circle cx="12" cy="13" r="4"/></svg><span>把下一束光留在这里</span></div><span class="frame-bottom">A LITTLE LIGHT, A LITTLE STILLNESS.</span></div><figcaption><span>山野与远方</span><span>摄影展位 · 02</span></figcaption></figure>
+        <figure class="photo-slot"><div class="photo-frame portrait-frame"><span class="frame-top">PHOTOGRAPHY / 003</span><div class="portrait-art" aria-hidden="true"><span></span><i></i></div><div class="placeholder-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h4l2-3h4l2 3h4v13H4Z"/><circle cx="12" cy="13" r="4"/></svg><span>故事，会在这里发生</span></div><span class="frame-bottom">EVERY FACE HAS A STORY.</span></div><figcaption><span>人物与故事</span><span>摄影展位 · 03</span></figcaption></figure>
+      </div>
+      <p class="photo-note" id="photo-note" role="status"><span aria-hidden="true">＋</span> 摄影作品整理中，下一次更新，放上我眼中的世界。</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer wrap"><a class="footer-brand" href="/">胡杰 <span>HU JIE</span></a><span>© <span id="year">2026</span> · 用好奇心，慢慢创造。 <a id="manage-link" href="/manage" hidden>管理照片 ↗</a></span><a href="#" class="back-top">回到顶部 <span aria-hidden="true">↑</span></a></footer>
+  <div class="site-preferences">
+    <label class="theme-picker" hidden>
+      <svg class="theme-icon" viewBox="0 0 20 20" aria-hidden="true">
+        <path class="theme-moon" d="M16.6 12.2A7 7 0 0 1 7.8 3.4a7 7 0 1 0 8.8 8.8Z"/>
+        <path class="theme-sun" d="M10 1.5v2m0 13v2m8.5-8.5h-2m-13 0h-2m14.5-6-1.4 1.4m-9.2 9.2L4 16m12 0-1.4-1.4M5.4 5.4 4 4m10 6a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
+      </svg>
+      <select id="theme-select" aria-label="页面外观">
+        <option value="system">跟随系统</option>
+        <option value="day">白天</option>
+        <option value="night">夜晚</option>
+      </select>
+      <svg class="theme-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg>
+    </label>
+    <button type="button" id="motion-toggle" aria-pressed="true" hidden><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 7v4M7 3v12M11 5v8M15 7v4"/></svg><span>动态：开</span></button>
+  </div>
+</body>
+</html>
